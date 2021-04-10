@@ -66,7 +66,8 @@ def main():
 
     while True:
         success, img = cap.read()
-        img = detector.findHands(img)
+        img = detector.findHands(img) #to not draw lines, pass draw = False with img
+        # to not draw lines, pass draw = False with img
         lmlist = detector.findPosition(img)
         # if not lmlist:
         #     print(lmlist[4])
